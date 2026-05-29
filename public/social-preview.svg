@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07162B"/>
+      <stop offset="0.55" stop-color="#0D2B53"/>
+      <stop offset="1" stop-color="#1A4E86"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(964 132) rotate(120) scale(258 258)">
+      <stop stop-color="#F59E0B" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="965" cy="132" r="258" fill="url(#glow)"/>
+  <rect x="76" y="90" width="310" height="44" rx="22" fill="white" fill-opacity="0.14" stroke="white" stroke-opacity="0.28"/>
+  <text x="104" y="119" fill="#F8FBFF" font-family="Space Grotesk, Arial, sans-serif" font-size="20" letter-spacing="2">GUE CYBER LIMITED</text>
+  <text x="76" y="268" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="74" font-weight="800">Empowering Businesses</text>
+  <text x="76" y="344" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="74" font-weight="800">Through Technology</text>
+  <text x="76" y="430" fill="#D7E7FF" font-family="Manrope, Arial, sans-serif" font-size="32">IT Support · Cybersecurity · CBT · Training</text>
+</svg>
