@@ -57,6 +57,16 @@ function SiteFooter() {
     return (
         <footer className="site-footer">
             <div className="container">
+                <div className="footer-brand">
+                    <Link to="/" className="footer-brand-link" aria-label="Gue Cyber home">
+                        <img src="/guecyber%20.png" alt="Gue Cyber logo" className="footer-brand-logo" />
+                        <div className="footer-brand-text">
+                            <strong>Gue Cyber Limited</strong>
+                            <span>Cybersecurity, IT Support and Digital Services</span>
+                        </div>
+                    </Link>
+                </div>
+
                 <div className="footer-newsletter">
                     <div className="footer-newsletter-copy">
                         <h3>Stay informed on cybersecurity in Nigeria.</h3>

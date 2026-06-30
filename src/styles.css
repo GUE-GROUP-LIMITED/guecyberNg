@@ -7,12 +7,16 @@
 }
 
 :root {
-    --ink-900: #0f1d33;
-    --ink-700: #1f3558;
+    --ink-900: #0a2a5f;
+    --ink-700: #123f7d;
     --cloud-100: #f5f8ff;
     --cloud-200: #e8eefb;
-    --sun-400: #f59e0b;
-    --sky-500: #2563eb;
+    --sun-400: #ef1f2a;
+    --sky-500: #0f4ea8;
+    --brand-blue: #0a2a5f;
+    --brand-blue-deep: #081f48;
+    --brand-red: #ef1f2a;
+    --brand-red-soft: #ff4852;
     --card-shadow: 0 14px 36px rgba(23, 42, 79, 0.12);
     --hero-shadow: 0 40px 80px rgba(10, 25, 54, 0.32);
     --container: 1100px;
@@ -47,7 +51,7 @@ a {
     top: 0;
     z-index: 10;
     backdrop-filter: blur(12px);
-    background: rgba(10, 28, 53, 0.96);
+    background: linear-gradient(92deg, rgba(8, 31, 72, 0.97), rgba(10, 42, 95, 0.94));
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -76,6 +80,10 @@ a {
     align-items: center;
     gap: 1rem;
     padding: 1.35rem 0;
+}
+
+.site-nav-left {
+    min-width: 220px;
 }
 
 .site-nav-left,
@@ -119,7 +127,7 @@ a {
 }
 
 .site-nav ul a.is-active {
-    border-bottom-color: var(--sun-400);
+    border-bottom-color: var(--brand-red);
 }
 
 .nav-link-soft {
@@ -141,14 +149,14 @@ a {
 }
 
 .nav-link-strong {
-    background: #ffffff;
-    color: var(--ink-900);
+    background: var(--brand-red);
+    color: #ffffff;
     border-color: transparent;
 }
 
 .nav-link-strong:hover {
-    color: var(--ink-900);
-    background: #e7edf8;
+    color: #ffffff;
+    background: var(--brand-red-soft);
     border-color: transparent;
 }
 
@@ -157,11 +165,28 @@ a {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.58rem;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
-    letter-spacing: 0.11em;
-    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    font-size: 0.89rem;
     color: #ffffff;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 3px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.logo-wordmark {
+    white-space: nowrap;
 }
 
 .hero {
@@ -405,10 +430,50 @@ a {
 }
 
 .site-footer {
-    background: #0a1c35;
+    background:
+        linear-gradient(125deg, rgba(8, 31, 72, 0.98), rgba(10, 42, 95, 0.96)),
+        radial-gradient(circle at 85% 20%, rgba(239, 31, 42, 0.24), rgba(239, 31, 42, 0));
     color: #f4f7ff;
     padding: 3rem 0 1.3rem;
     font-size: 0.95rem;
+}
+
+.footer-brand {
+    margin-bottom: 1.45rem;
+}
+
+.footer-brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+}
+
+.footer-brand-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 5px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+.footer-brand-text {
+    display: grid;
+    gap: 0.14rem;
+}
+
+.footer-brand-text strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+}
+
+.footer-brand-text span {
+    color: rgba(226, 236, 255, 0.88);
+    font-size: 0.84rem;
 }
 
 .footer-newsletter {
@@ -449,11 +514,15 @@ a {
 .footer-newsletter-form button {
     border: none;
     border-radius: 0.6rem;
-    background: var(--sun-400);
-    color: #0c1f3a;
+    background: var(--brand-red);
+    color: #ffffff;
     font-weight: 700;
     padding: 0.74rem 1rem;
     cursor: pointer;
+}
+
+.footer-newsletter-form button:hover {
+    background: var(--brand-red-soft);
 }
 
 .footer-links-grid {
@@ -772,6 +841,10 @@ a {
         justify-content: flex-start;
     }
 
+    .site-nav-left {
+        min-width: auto;
+    }
+
     .site-nav-right {
         margin-left: auto;
     }
@@ -823,6 +896,21 @@ a {
 
     .footer-newsletter-form {
         flex-direction: column;
+    }
+
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-wordmark {
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+    }
+
+    .footer-brand-logo {
+        width: 50px;
+        height: 50px;
     }
 
     .footer-links-grid {

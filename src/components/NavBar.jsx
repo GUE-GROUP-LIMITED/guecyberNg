@@ -12,7 +12,8 @@ function NavBar() {
         <nav className="site-nav" aria-label="Primary">
             <div className="site-nav-left">
                 <Link to="/" className="logo" aria-label="Gue Cyber home">
-                    GUE CYBER
+                    <img src="/guecyber%20.png" alt="Gue Cyber logo" className="logo-mark" />
+                    <span className="logo-wordmark">GUE CYBER</span>
                 </Link>
             </div>
 
