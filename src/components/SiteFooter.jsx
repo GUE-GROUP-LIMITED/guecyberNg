@@ -3,39 +3,37 @@ import { resetConsentChoice } from "../utils/consent";
 
 const footerNavs = [
     {
-        label: "Resources",
+        label: "Services",
         items: [
-            { to: "/contact", name: "Contact" },
-            { to: "/services", name: "Support" },
-            { href: "https://www.guecyber.ng", name: "Documentation" },
-            { href: "https://www.guecyber.ng", name: "Pricing" }
+            { to: "/services", name: "Cybersecurity Training" },
+            { to: "/services", name: "Phishing Awareness" },
+            { to: "/services", name: "IT Support" },
+            { to: "/services", name: "Printing & Graphics" },
         ]
     },
     {
-        label: "About",
+        label: "Programmes",
         items: [
-            { href: "https://www.guegroup.com", name: "About Gue Group" },
-            { to: "/privacy", name: "Privacy" },
-            { to: "/data-request", name: "Data Request" },
-            { to: "/terms", name: "Terms" },
-            { href: "https://www.guecyber.ng", name: "License" }
-        ]
-    },
-    {
-        label: "Explore",
-        items: [
-            { to: "/cbt", name: "CBT Center" },
             { to: "/training", name: "Training" },
-            { to: "/services", name: "IT Services" },
-            { href: "https://www.guecyber.ng", name: "Blog" }
+            { to: "/cbt", name: "CBT Center" },
+            { to: "/training", name: "Digital Skills" },
+            { to: "/training", name: "CBT Preparation" },
         ]
     },
     {
         label: "Company",
         items: [
-            { href: "https://www.guegroup.com", name: "Partners" },
-            { href: "mailto:info@guecyber.ng", name: "Team" },
-            { href: "mailto:info@guecyber.ng", name: "Careers" }
+            { href: "https://www.guegroup.com", name: "Gue Group Limited" },
+            { href: "https://insights.guecyber.com", name: "GueInsight Platform" },
+            { to: "/contact", name: "Contact Us" },
+        ]
+    },
+    {
+        label: "Legal",
+        items: [
+            { to: "/privacy", name: "Privacy Policy" },
+            { to: "/data-request", name: "Data Request" },
+            { to: "/terms", name: "Terms of Service" },
         ]
     }
 ];
@@ -44,9 +42,12 @@ function FooterLink({ item }) {
     if (item.to) {
         return <Link to={item.to}>{item.name}</Link>;
     }
-
     return (
-        <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}>
+        <a
+            href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
+            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+        >
             {item.name}
         </a>
     );
@@ -58,8 +59,8 @@ function SiteFooter() {
             <div className="container">
                 <div className="footer-newsletter">
                     <div className="footer-newsletter-copy">
-                        <h3>Get Gue Cyber updates straight to your inbox.</h3>
-                        <p>Security insights, training opportunities, and product updates from our team.</p>
+                        <h3>Stay informed on cybersecurity in Nigeria.</h3>
+                        <p>Security tips, training updates, and news from Gue Cyber Limited — delivered to your inbox.</p>
                     </div>
                     <form className="footer-newsletter-form" onSubmit={(event) => event.preventDefault()}>
                         <input type="email" required placeholder="Enter your email" aria-label="Email address" />
@@ -83,26 +84,20 @@ function SiteFooter() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>
-                        © 2026 Gue Cyber Limited. All rights reserved. Subsidiary of{" "}
-                        <a href="https://www.guegroup.com" target="_blank" rel="noopener noreferrer">
-                            Gue Group Limited
-                        </a>
-                        .
-                    </p>
+                    <div>
+                        <p>
+                            © 2026 Gue Cyber Limited (RC 8341363) · Subsidiary of{" "}
+                            <a href="https://www.guegroup.com" target="_blank" rel="noopener noreferrer">
+                                Gue Group Limited
+                            </a>{" "}
+                            (RC 7501599) · Benue State, Nigeria
+                        </p>
+                        <p style={{ marginTop: "0.25rem", fontSize: "0.82rem", opacity: 0.7 }}>
+                            Registered under the Companies and Allied Matters Act 2020 ·{" "}
+                            <a href="mailto:info@guecyber.ng">info@guecyber.ng</a>
+                        </p>
+                    </div>
                     <div className="footer-socials">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            Facebook
-                        </a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
-                            X
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            Instagram
-                        </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            GitHub
-                        </a>
                         <button type="button" className="cookie-pref-btn" onClick={resetConsentChoice}>
                             Cookie Preferences
                         </button>
