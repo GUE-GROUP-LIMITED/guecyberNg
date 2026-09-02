@@ -51,7 +51,7 @@ export function initScrollReveal() {
     );
 
     const observe = () => {
-        document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => {
+        document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale").forEach((el) => {
             observer.observe(el);
         });
     };
@@ -60,7 +60,7 @@ export function initScrollReveal() {
 
     // Re-scan after route changes / lazy-loaded content
     const mutationObserver = new MutationObserver(() => {
-        document.querySelectorAll(".reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed)").forEach((el) => {
+        document.querySelectorAll(".reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed)").forEach((el) => {
             observer.observe(el);
         });
     });
